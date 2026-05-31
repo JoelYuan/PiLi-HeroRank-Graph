@@ -1,0 +1,30 @@
+{
+  "simulation_id": "sim_ce40061d24fe",
+  "project_id": "proj_68e84cb9b37f",
+  "graph_id": "2f9c1fc1-9380-48dc-a192-6d75a87f4de7",
+  "enable_twitter": true,
+  "enable_reddit": true,
+  "status": "ready",
+  "entities_count": 1279,
+  "profiles_count": 1279,
+  "entity_types": [
+    "Technique",
+    "Person",
+    "Master",
+    "FactionMember",
+    "Artifact",
+    "SectLeader",
+    "Event",
+    "MartialArtist",
+    "Organization",
+    "Location"
+  ],
+  "config_generated": true,
+  "config_reasoning": "Time config: The simulation topic 'Legend of Su Huan-jen' (素还真) is a classic martial arts epic with a heavy nostalgic and fan-base driven nature. The time configuration follows the Beijing work schedule: low activity in early morning (0-5am), rising during breakfast/commute (6-8am), stable during work hours, and reaching peak engagement in the evening (19-22h) when fans typically engage in deep lore discussions, video watching, or social media community interactions. The simulation duration is set to 48 hours to capture a full weekend cycle of fan activity. | Event config: The configuration captures the two main plot arcs from the text: the individual combat/mystery of Yu Tianji and the large-scale political event at Shenglongkou. The initial posts use different entity types (Person for news, Event for official announcements, Master for veteran perspectives, and Organization for structural views) to simulate a multi-faceted discussion within the martial arts world. | Agent config: Successfully generated 1279 | Initial posts assigned: 4 posts assigned publishers",
+  "current_round": 0,
+  "twitter_status": "not_started",
+  "reddit_status": "not_started",
+  "created_at": "2026-05-31T19:27:45.693072",
+  "updated_at": "2026-06-01T06:32:49.450130",
+  "error": null
+}

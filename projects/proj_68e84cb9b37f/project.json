@@ -1,0 +1,279 @@
+{
+  "project_id": "proj_68e84cb9b37f",
+  "name": "Unnamed Project",
+  "status": "graph_completed",
+  "created_at": "2026-05-31T13:47:25.995747",
+  "updated_at": "2026-05-31T19:22:35.964726",
+  "files": [
+    {
+      "filename": "武林往事.txt",
+      "size": 649787
+    }
+  ],
+  "total_text_length": 222350,
+  "ontology": {
+    "entity_types": [
+      {
+        "name": "MartialArtist",
+        "description": "High-level combatants in the martial world capable of using qi or special techniques.",
+        "attributes": [
+          {
+            "name": "skill_level",
+            "type": "text",
+            "description": "The mastery level of their martial arts"
+          },
+          {
+            "name": "technique_style",
+            "type": "text",
+            "description": "The specific style or signature move used"
+          }
+        ],
+        "examples": [
+          "玉天玑",
+          "非凡公子"
+        ]
+      },
+      {
+        "name": "Master",
+        "description": "Respected elders or teachers who guide disciples and influence martial world politics.",
+        "attributes": [
+          {
+            "name": "reputation",
+            "type": "text",
+            "description": "The historical standing in the martial world"
+          }
+        ],
+        "examples": [
+          "素还真",
+          "一页书"
+        ]
+      },
+      {
+        "name": "SectLeader",
+        "description": "Individuals holding official leadership positions within religious or martial factions.",
+        "attributes": [
+          {
+            "name": "title",
+            "type": "text",
+            "description": "The formal designation held"
+          },
+          {
+            "name": "governance_style",
+            "type": "text",
+            "description": "How they manage their followers"
+          }
+        ],
+        "examples": [
+          "青阳子",
+          "菩提院主"
+        ]
+      },
+      {
+        "name": "FactionMember",
+        "description": "Followers or subordinates belonging to a specific martial school or organization.",
+        "attributes": [
+          {
+            "name": "loyalty_degree",
+            "type": "text",
+            "description": "Level of devotion to their master"
+          }
+        ],
+        "examples": [
+          "风雪生",
+          "雪鸦"
+        ]
+      },
+      {
+        "name": "Artifact",
+        "description": "Legendary weapons or magical objects that drive plot developments.",
+        "attributes": [
+          {
+            "name": "power_grade",
+            "type": "text",
+            "description": "The destructive potential of the item"
+          }
+        ],
+        "examples": [
+          "无敌战龙",
+          "九龙魂魄"
+        ]
+      },
+      {
+        "name": "Location",
+        "description": "Geographic landmarks or strategic bases for martial factions.",
+        "attributes": [
+          {
+            "name": "strategic_value",
+            "type": "text",
+            "description": "Importance in martial world conflicts"
+          }
+        ],
+        "examples": [
+          "圣龙口",
+          "猜心园"
+        ]
+      },
+      {
+        "name": "Technique",
+        "description": "Specific martial arts moves or spiritual manifestations.",
+        "attributes": [
+          {
+            "name": "elemental_type",
+            "type": "text",
+            "description": "The nature of the energy used"
+          }
+        ],
+        "examples": [
+          "破世阴字",
+          "天地根"
+        ]
+      },
+      {
+        "name": "Event",
+        "description": "Significant historical or martial gatherings that trigger opinion shifts.",
+        "attributes": [
+          {
+            "name": "impact_scale",
+            "type": "text",
+            "description": "How much it affects the martial world"
+          }
+        ],
+        "examples": [
+          "合修会重立大会",
+          "毁龙计划"
+        ]
+      },
+      {
+        "name": "Person",
+        "description": "Any individual not fitting other specific warrior or leader types.",
+        "attributes": [
+          {
+            "name": "role",
+            "type": "text",
+            "description": "Their social function in the narrative"
+          }
+        ],
+        "examples": [
+          "秦假仙",
+          "骨董"
+        ]
+      },
+      {
+        "name": "Organization",
+        "description": "Groups, sects, or alliances that act as collective entities.",
+        "attributes": [
+          {
+            "name": "ideology",
+            "type": "text",
+            "description": "The core belief system of the group"
+          }
+        ],
+        "examples": [
+          "血道天宫",
+          "合修会"
+        ]
+      }
+    ],
+    "edge_types": [
+      {
+        "name": "LEAD_FACTION",
+        "description": "A SectLeader or Master directs an Organization.",
+        "source_targets": [
+          {
+            "source": "SectLeader",
+            "target": "Organization"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "BELONGS_TO",
+        "description": "A FactionMember is a part of an Organization.",
+        "source_targets": [
+          {
+            "source": "FactionMember",
+            "target": "Organization"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "EXECUTE_TECHNIQUE",
+        "description": "A MartialArtist uses a specific Technique.",
+        "source_targets": [
+          {
+            "source": "MartialArtist",
+            "target": "Technique"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "CHALLENGE_AT",
+        "description": "An individual initiates a fight or event at a Location.",
+        "source_targets": [
+          {
+            "source": "MartialArtist",
+            "to": "Location"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "ALLIED_WITH",
+        "description": "Two entities share a common goal or bond.",
+        "source_targets": [
+          {
+            "source": "Person",
+            "target": "Person"
+          },
+          {
+            "source": "MartialArtist",
+            "target": "MartialArtist"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "REFORM_ORGANIZATION",
+        "description": "An Event changes the structure of an Organization.",
+        "source_targets": [
+          {
+            "source": "Event",
+            "target": "Organization"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "DEFEND_LOCATION",
+        "description": "A MartialArtist or FactionMember protects a Location.",
+        "source_targets": [
+          {
+            "source": "MartialArtist",
+            "target": "Location"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "OPPOSE_POLICY",
+        "description": "An individual expresses dissent against an Organization's actions.",
+        "source_targets": [
+          {
+            "source": "Person",
+            "target": "Organization"
+          }
+        ],
+        "attributes": []
+      }
+    ]
+  },
+  "analysis_summary": "The ontology is designed to capture the complex web of power struggles, religious alliances (Three Religions), and interpersonal rivalries in the 'Pili' universe. It focuses on how individual martial prowess (Techniques/Artifacts) influences large-scale political shifts (Organization reforms/Events).",
+  "graph_id": "2f9c1fc1-9380-48dc-a192-6d75a87f4de7",
+  "graph_build_task_id": "dc7e7cf5-d215-44b5-b4ef-91aadaf6b968",
+  "simulation_requirement": "素还真的武林传奇",
+  "chunk_size": 500,
+  "chunk_overlap": 50,
+  "error": null
+}
